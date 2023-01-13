@@ -1,0 +1,42 @@
+:root
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product
+{
+    border-radius: .6rem;
+    padding: 1rem;
+    border: .2rem dotted #333;
+}
+
+#grid-container
+{
+    display:grid;
+    grid-template-areas: 
+        "top top top"
+        "left middle right"
+        "bottom bottom corner";
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 2vw;
+    padding: 2vw;
+    width: 100vw;
+    height: 100vh;
+    border-radius: .6rem;
+    border: .2rem dashed #333;
+}
+
+#grid-container div:nth-child(1)
+{
+    grid-area: bottom;
+}
+
+#grid-container div:nth-child(2)
+{
+    grid-area: top;
+}
+
+#grid-container div:nth-child(3)
+{
+    grid-area: middle;
+}

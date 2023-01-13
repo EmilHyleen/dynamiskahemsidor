@@ -1,0 +1,235 @@
+:root
+{
+    background-color: black;
+    /* overflow:hidden;*/
+}
+
+/* Tärningar*/
+
+#dices
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#dices .dice
+{
+    display:flex;
+    border-radius: 1rem;
+    border: 1px solid yellow;
+    width:10vw;
+    height:10vw;
+}
+
+#dices .dice-borderless
+{
+    display:flex;
+    border-radius: 1rem;
+    width:10vw;
+    height:10vw;
+}
+
+.item
+{
+    display:flex;
+    border-radius: .4vw;
+    border: 1px solid yellow;
+    
+    width:1vw;
+    height:1vw;
+}
+
+.dice-1
+{
+    justify-content: center;
+}
+
+.dice-1 div:nth-of-type(1)
+{
+    align-self: center;
+}
+
+.dice-2
+{
+    justify-content: space-around;
+}
+
+.dice-2 .item
+{
+    margin: 1vw 0;
+}
+
+.dice-2 div:nth-of-type(2)
+{
+    align-self: flex-end;
+}
+
+.dice-3
+{
+    justify-content: space-around;
+}
+
+.dice-3 .item
+{
+    margin: 1vw 0;
+}
+
+.dice-3 div:nth-of-type(2)
+{
+    align-self: flex-end;
+}
+
+.dice-3-2
+{
+    justify-content: center;
+    margin-left: -16.5vw;
+}
+
+.dice-3-2 div:nth-of-type(1)
+{
+    align-self: center;
+}
+
+.dice-4
+{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dice-4 .item
+{
+    margin:1.5vw
+}
+
+.dice-5
+{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.dice-5 .item
+{
+    margin:1.5vw;
+}
+
+.dice-5-2
+{
+    justify-content: center;
+    margin-left: -16.5vw;
+}
+
+.dice-5-2 div:nth-of-type(1)
+{
+    align-self: center;
+}
+
+.dice-6
+{    
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.dice-6 .item
+{
+    margin: .8vw;
+}
+
+/* Tegel*/
+
+#tegelvägg
+{
+    display: block;
+    margin-top: 10vh;
+    flex-direction: row;
+}
+
+#tegelvägg .row
+{
+    display: flex;
+    width: 30vw;
+    height: 5vh;
+}
+
+.row .large
+{
+    flex-grow: 3;
+}
+
+.row .small
+{
+    flex-grow: 1;
+}
+
+.row .tegel
+{
+    border: 1px solid yellow;
+    border-radius: 1rem;
+    margin: .5rem;
+}
+
+
+/* Polygon */
+
+#polygon-wrapper
+{    
+    margin-top: 10vh;
+
+    height:85vh;
+    width: 96vw;
+    
+    --triangle-gap: 1vw;
+    --triangle-size: 5vw;
+    --equilateral-mult-percentage: 0.866;
+
+    /* formula: (length + length) * 0.866 */
+    --triangle-height: calc(calc(
+                var(--triangle-size) + var(--triangle-size)) * var(--equilateral-mult-percentage)
+        );
+}
+
+.polygon-row
+{    
+    margin-top: -0.5vw;
+    margin-bottom: -.5vw;
+    display: flex;
+}
+
+.polygon-row-indented
+{    
+    margin-bottom: -.5vw;
+    display: flex;
+    margin-left: calc(var(--triangle-size) + var(--triangle-gap));
+}
+
+.arrow-up
+{
+    width: 0;
+    height: 0;
+
+    margin: var(--triangle-gap);
+
+    border-left: var(--triangle-size) solid transparent;
+    border-right: var(--triangle-size) solid transparent;
+
+    border-bottom: var(--triangle-height) solid yellow;
+}
+
+.arrow-down
+{
+    width: 0;
+    height: 0;
+    
+    /* margin-top: var(--triangle-gap); */
+    margin-top: 0.5vw;
+    /* margin-left: calc(calc(var(--triangle-size) / 2 ) * -1); */
+    /* margin-right: calc(calc(var(--triangle-size) / 2 ) * -1); */
+    margin-left: -5vw;
+    margin-right: -5vw;
+
+    border-left: var(--triangle-size) solid transparent;
+    border-right: var(--triangle-size) solid transparent;
+
+    border-top: var(--triangle-height) solid yellow;
+}

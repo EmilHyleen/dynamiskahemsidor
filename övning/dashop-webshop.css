@@ -1,0 +1,118 @@
+:root
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form
+{
+    border: .5em solid #ccc;
+}
+
+nav
+{
+    background-color: darkorange;
+}
+
+ul
+{
+    list-style: none;
+}
+
+li
+{
+    float:left;
+    margin: .5em;
+    padding: .2em .8em;
+    border-radius: .5em;
+    background-color: yellow;
+}
+
+h1
+{
+    color:yellow;
+    padding-left: 2rem;
+}
+
+/* Flexbox base */
+
+.box
+{
+    display:flex;
+    padding:1vmin;
+    gap:1vmin;
+    border: 1vmin solid darkorange;
+    width: 95%;
+    height:95vh;
+}
+
+.item
+{
+    text-align: center;
+    line-height: 10vmax;
+    border: 0.2rem solid darkorange;
+    width:10vmin;
+    height:10vh;
+    border-radius: 1vmin;
+}
+
+/* Our css */
+
+#boxes div:nth-of-type(2)
+{
+    flex-direction: column;
+}
+
+#boxes div:nth-of-type(3)
+{
+    justify-content: center;
+}
+
+#boxes div:nth-of-type(4)
+{
+    justify-content: space-around;
+}
+
+#boxes div:nth-of-type(5)
+{
+    justify-content: center;
+    align-items: center;
+}
+
+#boxes div:nth-of-type(6)
+{
+    flex-wrap: wrap;
+}
+
+#boxes div:nth-of-type(7)
+{
+    flex-wrap: wrap;
+    overflow: none;
+}
+
+#boxes div:nth-of-type(7) .item
+{
+    width: 45vmin;
+    height:45vmin;
+}
+
+#boxes div:nth-of-type(8) div
+{
+    flex-grow: 1;
+}
+
+#boxes div:nth-of-type(8) div:nth-of-type(1)
+{
+    flex-grow: 2;
+}
+
+#boxes div:nth-of-type(9)
+{
+    justify-content: space-evenly;
+}
+
+#boxes div:nth-of-type(9) div:nth-of-type(1)
+{
+    align-self: flex-end;
+}
