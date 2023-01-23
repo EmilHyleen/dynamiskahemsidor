@@ -1,25 +1,29 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--force dark theme-->
+    <meta id="mode" name="color-scheme" content="dark">
 
     <link rel="stylesheet" type="text/css" href="inlämning.css">
 
+    <script src="Rnd.js"></script>
     <script src="inlämning.js" defer></script>
-
-    <title>Home | CUBESTORE</title>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>CUBESTORE</title>
 </head>
-<body>
+<body class=".color-scheme-bg">
     <h1>CUBESTORE</h1>
     <nav>
         <ul>
             <div id="links" class="links">
-                <li>home</li>
-                <li>webshop</li>
-                <li>contacts</li>
-                <li>about us</li>
+                <li class=".color-scheme-text">Home</li>
+                <li class=".color-scheme-text">Webshop</li>
+                <li class=".color-scheme-text">Contact</li>
+                <li class=".color-scheme-text">About us</li>
             </div>
             <li class="hamburger-menu" onclick="FunkyFunction()"><img src="hamburger-icon.png" alt="hamburger menu icon"></li>
         </ul>
@@ -27,24 +31,65 @@
     </nav>
     <ul id="hamburger-menu-dropdown">
         <div id="hamburger-links">
-            <li>home</li>
-            <li>webshop</li>
-            <li>contacts</li>
-            <li>about us</li>
+            <li class=".color-scheme-text">Home</li>
+            <li class=".color-scheme-text">Webshop</li>
+            <li class=".color-scheme-text">Contact</li>
+            <li class=".color-scheme-text">About us</li>
         </div>
     </ul>
 
     <div class="shop-container">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
+        <div class="item .color-scheme-bg"></div>
     </div>
+
+    <!--contact info/map-->
+    <section>
+        <div class="form-container">
+            <h1 style="color: black;">Contact Us</h1>
+            <form action="#">
+                <label for="fname" class=".color-scheme-text">First Name</label>
+                <input type="text">
+                
+                <label for="lname" class=".color-scheme-text">Last Name</label>
+                <input type="text">
+
+                <label for="country" class=".color-scheme-text">Country</label>
+                <select name="country">
+                    <option>Sweden</option>
+                    <option>Denmark</option>
+                    <option>Norway</option>
+                </select>
+                
+                <label for="subject" class=".color-scheme-text">Subject</label>
+                <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit" class=".color-scheme-text">
+            </form>
+        </div> 
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.129215129824!2d-42.64483108439365!3d35.37725105418988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b2f6e936b986be2!2zMzXCsDIyJzM4LjEiTiA0MsKwMzgnMzMuNSJX!5e0!3m2!1ssv!2sse!4v1673628889291!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="google_translate_element"></div>
+    </section>
+
+    <!--social media links-->
+    <footer>
+        <h1>Follow us on Social Media</h1>
+        <a class=".color-scheme-text" href="https://www.instagram.com/" >Instagram</a>
+        <a class=".color-scheme-text" href="https://www.facebook.com/"  >Facebook</a>
+        <a class=".color-scheme-text" href="https://twitter.com/"       >Twitter</a>
+        <a class=".color-scheme-text" href="https://www.tiktok.com/"    >Tiktok</a>
+        <a class=".color-scheme-text" href="https://www.wechat.com/"    >Wechat</a>
+        <a class=".color-scheme-text" href="https://www.whatsapp.com/"  >WhatsApp</a>
+        <a class=".color-scheme-text" href="https://myspace.com/"       >Myspace</a>
+    </footer>
 </body>
 </html>

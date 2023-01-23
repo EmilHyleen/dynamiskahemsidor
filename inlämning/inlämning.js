@@ -37,6 +37,9 @@ addEventListener("resize", () =>
 
 // constructs item contents
 let products = document.getElementsByClassName("item");
+
+
+
 const cube = `
     <p class="cube-title">Cool Cube</p>
     <div class="cube">
@@ -59,6 +62,21 @@ for (i = 0; i < products.length; ++i)
 let pricetags = document.getElementsByClassName("price");
 for(let i = 0; i < pricetags.length; ++i)
 {
-    let price = Math.floor(Math.random() * 1000 + 1) + "$";
-    pricetags[i].innerHTML = price;
+    let price = Rnd.Rnd(1, 1000);
+    pricetags[i].innerHTML = `${price}$`;
 }
+
+// dark mode listener
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const NewColorScheme = event.matches ? "dark" : "light";
+    alert(NewColorScheme);
+});
+
+// Google Translate API
+var userLang = navigator.language || navigator.userLanguage; 
+userLang = userLang.slice(0, 2);
+function googleTranslateElementInit() 
+{
+    new google.translate.TranslateElement({pageLanguage: 'se'}, 'google_translate_element');
+}
+googleTranslateElementInit();

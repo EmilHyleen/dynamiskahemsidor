@@ -28,7 +28,7 @@ nav ul
 {
     float:left;
     padding: 4vh 1vh;
-    background-color: yellow;
+    background-color: rgb(160, 160, 0);
     width: 12vw;
     white-space: nowrap;
 
@@ -45,7 +45,7 @@ li:hover
     float:right;
     height: 6.3vh;
     padding: 2vh;
-    background-color: yellow;
+    background-color: rgb(160, 160, 0);
     visibility: hidden;
 }
 
@@ -59,13 +59,14 @@ li:hover
     float:left;
     list-style-type: none;
     display: flex;
+    z-index: 1000;
 }
 
 #hamburger-links
 {
     visibility: hidden;
     background-color: orange;
-    display: flex;
+    display: block;
 }
 
 #hamburger-menu-dropdown li
@@ -74,33 +75,6 @@ li:hover
     padding: 4vh 0vw;
     padding-left: 5vw;
     margin: 0;
-}
-
-@media screen and (max-width: 1920px)
-{
-    .links
-    {
-        display: flex;
-    }
-
-    .links li
-    {
-        width: 12vw;
-    }
-}
-
-@media screen and (max-width:600px)
-{
-
-    .links
-    {
-        visibility: hidden;
-    }
-
-    .hamburger-menu
-    {
-        visibility: visible;
-    }
 }
 
 .shop-container
@@ -118,11 +92,13 @@ li:hover
     outline: 2px solid darkorange;
 }
 
+/*
 .item:hover .cube
 {
     animation-duration: 30s;
-    animation-play-state: running;
+    animation-play-state: paused;
 }
+*/
 
 .cube-title
 {
@@ -142,14 +118,14 @@ li:hover
 
     transform-style: preserve-3d;
     animation: spin 60s infinite linear;
-    animation-play-state: paused;
+    animation-play-state: running;
     position: relative;
     width: var(--cube-size);
     height: var(--cube-size);
     top: 50%;
     left: 50%;
     margin-left: calc(var(--cube-size) / 2 * -1);
-    margin-top: -9vw;
+    margin-top: -30%;
 }
 
 .cube div 
@@ -211,6 +187,136 @@ li:hover
     100% {transform: rotateX(740deg) rotateY(740deg) rotateZ(740deg);}
 }
 
-/* @media (prefers-color-scheme:dark) {
+input[type=text], select, textarea 
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid darkorange;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] 
+{
+    background-color: rgb(255, 230, 0);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover 
+{
+    background-color: goldenrod;
+}
+
+.form-container 
+{
+    border-radius: 5px;
+    background-color: orange;
+    padding: 20px;
+}
+
+
+/* screen size media queries */
+@media screen and (max-width: 1920px)
+{
+    .links
+    {
+        display: flex;
+    }
+
+    .links li
+    {
+        width: 12vw;
+    }
+}
+
+@media screen and (max-width:1200px)
+{
+    .cube 
+    {
+        top: 80%;
+    }
+
+    .price
+    {
+        margin-top: 18vw;
+    }
+
+    .shop-container
+    {
+        grid-template-columns: 50% 50%;    
+        grid-template-rows: 50% 50% 50% 50% 50%;
+    }
+
+    .form-container 
+    {
+        margin-top: 57vw;
+    }
+}
+
+@media screen and (max-width:600px)
+{
+
+    .links
+    {
+        visibility: hidden;
+    }
+
+    .cube 
+    {
+        top: 95%;
+    }
+
+    .price
+    {
+        margin-top: 43vw;
+    }
+
+    .hamburger-menu
+    {
+        visibility: visible;
+    }
     
-} */
+    .shop-container
+    {
+        grid-template-columns: 100%;    
+        grid-template-rows: 100% 100% 100% 100% 100% 100% 100% 100% 100% 100%;
+    }
+
+    .form-container 
+    {
+        margin-top: 342vw;
+    }
+}
+
+
+/* light/dark mode styling */ 
+@media (prefers-color-scheme:dark) 
+{
+    .color-scheme-bg
+    {
+        background-color: black !important;
+    }
+
+    .color-scheme-text
+    {
+        color:white !important;
+    }
+}
+
+@media (prefers-color-scheme:light) 
+{
+    .color-scheme-bg
+    {
+        background-color: white !important;
+    }
+    
+    .color-scheme-text
+    {
+        color:black !important;
+    }
+}
